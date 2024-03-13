@@ -15,30 +15,32 @@
 
 * {
     
-    box-sizing: border-box;
+    box-sizing: border-box; /*Hace que los border de los elementos se ajusten al tamaña dado,
+    por defectos los border, padding, margin se suman al total del width y del height 
+    colocando esta regla no va a suceder*/
 }
 
 body {
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /* recorta y Quita la barra de desplazamiento*/
 }
 
 .background-buildings,
 .foreground-buildings {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-evenly;
-    position: absolute;
+    width: 100%; /*Indica que va ocupar el 100% del ancho del body*/
+    height: 100%; /*Indica que va a ocupar el 100% del alto*/
+    display: flex; /*Flex-box diseño flexible*/
+    align-items: flex-end; /*Alinea el contenido en la parte de abajo del elemento padre*/
+    justify-content: space-evenly; /*Separa los elementos de forma equitativa*/
+    position: absolute;  /*No se mueven los elementos aunque esten encima de otro*/
     top: 0;
 }
 
 .building-wrap {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /*Indica a los elementos que se comporten como columnas*/
+    align-items: center;/*Los alinia en el centro*/
 }
 
 .window-wrap {
@@ -269,8 +271,8 @@ body {
 .fb5 {
     width: 10%;
     height: 33%;
-    position: relative;
-    right: 10%;
+    position: relative; /*Posision relativa para poder mover el elemento 10% a la derecha*/
+    right: 10%;/*Mueve el elemento 10% a la derecha*/
     background: repeating-linear-gradient(var(--building-color2),
             var(--building-color2)5%,
             transparent 5%,
